@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitrin Mağaza</title>
+<style>
+  :root{
+    --bg:#faf8f5; --card:#fff; --text:#2b2620; --muted:#786f60;
+    --accent:#c9784a; --line:#ece5da;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1c1a17; --card:#242119; --text:#f1ebe0; --muted:#b0a48f;
+      --accent:#e0995a; --line:#39332a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1c1a17; --card:#242119; --text:#f1ebe0; --muted:#b0a48f;
+    --accent:#e0995a; --line:#39332a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+  header{text-align:center;padding:56px 20px 32px;border-bottom:1px solid var(--line);}
+  header h1{margin:0 0 6px;font-size:clamp(26px,5vw,38px);letter-spacing:1px;}
+  header p{margin:0;color:var(--muted);}
+  main{max-width:900px;margin:0 auto;padding:32px 20px 80px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .thumb{height:170px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;}
+  .card h3{margin:14px 14px 4px;font-size:16px;}
+  .card .price{margin:0 14px 14px;color:var(--accent);font-weight:600;}
+  .cta{
+    display:block;margin:12px 14px 16px;text-align:center;background:var(--accent);
+    color:#fff;text-decoration:none;padding:9px;border-radius:8px;font-size:14px;
+  }
+  .contact{text-align:center;margin-top:48px;}
+  .contact a{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:12px 28px;border-radius:999px;font-weight:600;
+  }
+  .contact p{color:var(--muted);margin-bottom:14px;}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:20px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mağazan Adı</h1>
+  <p>Giyim & Aksesuar — sipariş için Instagram'dan yaz</p>
+</header>
+
+<main>
+  <div class="grid">
+    <div class="card">
+      <div class="thumb" style="background:#c9784a">Ürün Görseli</div>
+      <h3>Ürün Adı 1</h3>
+      <p class="price">₺249</p>
+      <a class="cta" href="https://instagram.com/your_username" target="_blank">Sipariş Ver</a>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:#7a8f6d">Ürün Görseli</div>
+      <h3>Ürün Adı 2</h3>
+      <p class="price">₺349</p>
+      <a class="cta" href="https://instagram.com/your_username" target="_blank">Sipariş Ver</a>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:#4a6a8f">Ürün Görseli</div>
+      <h3>Ürün Adı 3</h3>
+      <p class="price">₺199</p>
+      <a class="cta" href="https://instagram.com/your_username" target="_blank">Sipariş Ver</a>
+    </div>
+  </div>
+
+  <div class="contact">
+    <p>Beğendiğin ürünü Instagram'dan mesaj atarak sipariş verebilirsin</p>
+    <a href="https://instagram.com/your_username" target="_blank">Instagram'dan Yaz</a>
+  </div>
+</main>
+
+<footer>© Mağazan Adı</footer>
+
+</body>
+</html>
